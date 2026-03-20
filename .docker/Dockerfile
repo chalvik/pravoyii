@@ -1,4 +1,4 @@
-FROM php:8.5-fpm
+FROM php:8.3-fpm
 
 WORKDIR /var/app
 
@@ -6,6 +6,7 @@ RUN apt-get update && apt-get upgrade -y \
     && apt-get install apt-utils -y
 
 RUN apt-get update && apt-get install -y \
+    libxml2-dev \
     build-essential \
     libwebp-dev libjpeg62-turbo-dev libpng-dev libxpm-dev libzip-dev libpq-dev libgmp-dev libffi-dev libssl-dev \
     libfreetype6 libfreetype6-dev \
@@ -22,6 +23,8 @@ RUN docker-php-ext-install pdo pdo_mysql mysqli
 RUN docker-php-ext-install gd \
       && docker-php-ext-configure gd --with-freetype --with-jpeg \
 	  && docker-php-ext-install -j$(nproc) gd
+
+RUN docker-php-ext-install -j$(nproc) xml simplexml
 
 RUN pecl install xdebug && docker-php-ext-enable xdebug
 

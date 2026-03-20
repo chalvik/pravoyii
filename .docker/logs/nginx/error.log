@@ -378,3 +378,68 @@
 2026/03/13 19:14:04 [warn] 28#28: *170 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000008, client: 185.85.0.29, server: , request: "POST /admin/resource/ai-widget-resource/crud HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/admin/resource/ai-widget-resource/ai-widget-form-page"
 2026/03/13 19:19:44 [warn] 28#28: *182 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000009, client: 185.85.0.29, server: , request: "POST /admin/resource/ai-widget-resource/crud HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/admin/resource/ai-widget-resource/ai-widget-form-page"
 2026/03/13 19:56:25 [warn] 29#29: *272 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000010, client: 185.85.0.29, server: , request: "POST /admin/resource/ai-widget-resource/crud HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/admin/resource/ai-widget-resource/ai-widget-form-page"
+2026/03/20 19:07:45 [notice] 1#1: using the "epoll" event method
+2026/03/20 19:07:45 [notice] 1#1: nginx/1.24.0
+2026/03/20 19:07:45 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2026/03/20 19:07:45 [notice] 1#1: OS: Linux 6.12.68-linuxkit
+2026/03/20 19:07:45 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2026/03/20 19:07:45 [notice] 1#1: start worker processes
+2026/03/20 19:07:45 [notice] 1#1: start worker process 27
+2026/03/20 19:07:45 [notice] 1#1: start worker process 28
+2026/03/20 19:07:45 [notice] 1#1: start worker process 29
+2026/03/20 19:07:45 [notice] 1#1: start worker process 30
+2026/03/20 19:27:23 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2026/03/20 19:27:23 [notice] 27#27: gracefully shutting down
+2026/03/20 19:27:23 [notice] 28#28: gracefully shutting down
+2026/03/20 19:27:23 [notice] 29#29: gracefully shutting down
+2026/03/20 19:27:23 [notice] 27#27: exiting
+2026/03/20 19:27:23 [notice] 30#30: gracefully shutting down
+2026/03/20 19:27:23 [notice] 27#27: exit
+2026/03/20 19:27:23 [notice] 30#30: exiting
+2026/03/20 19:27:23 [notice] 28#28: exiting
+2026/03/20 19:27:23 [notice] 30#30: exit
+2026/03/20 19:27:23 [notice] 29#29: exiting
+2026/03/20 19:27:23 [notice] 29#29: exit
+2026/03/20 19:27:23 [notice] 28#28: exit
+2026/03/20 19:27:23 [notice] 1#1: signal 17 (SIGCHLD) received from 27
+2026/03/20 19:27:23 [notice] 1#1: worker process 27 exited with code 0
+2026/03/20 19:27:23 [notice] 1#1: worker process 30 exited with code 0
+2026/03/20 19:27:23 [notice] 1#1: signal 29 (SIGIO) received
+2026/03/20 19:27:23 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2026/03/20 19:27:23 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2026/03/20 19:27:23 [notice] 1#1: worker process 28 exited with code 0
+2026/03/20 19:27:23 [notice] 1#1: worker process 29 exited with code 0
+2026/03/20 19:27:23 [notice] 1#1: exit
+2026/03/20 19:29:36 [notice] 1#1: using the "epoll" event method
+2026/03/20 19:29:36 [notice] 1#1: nginx/1.24.0
+2026/03/20 19:29:36 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2026/03/20 19:29:36 [notice] 1#1: OS: Linux 6.12.68-linuxkit
+2026/03/20 19:29:36 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2026/03/20 19:29:36 [notice] 1#1: start worker processes
+2026/03/20 19:29:36 [notice] 1#1: start worker process 28
+2026/03/20 19:29:36 [notice] 1#1: start worker process 29
+2026/03/20 19:29:36 [notice] 1#1: start worker process 30
+2026/03/20 19:29:36 [notice] 1#1: start worker process 31
+2026/03/20 21:24:26 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2026/03/20 21:24:26 [notice] 28#28: gracefully shutting down
+2026/03/20 21:24:26 [notice] 30#30: gracefully shutting down
+2026/03/20 21:24:26 [notice] 31#31: gracefully shutting down
+2026/03/20 21:24:26 [notice] 28#28: exiting
+2026/03/20 21:24:26 [notice] 29#29: gracefully shutting down
+2026/03/20 21:24:26 [notice] 31#31: exiting
+2026/03/20 21:24:26 [notice] 30#30: exiting
+2026/03/20 21:24:26 [notice] 29#29: exiting
+2026/03/20 21:24:26 [notice] 28#28: exit
+2026/03/20 21:24:26 [notice] 29#29: exit
+2026/03/20 21:24:26 [notice] 30#30: exit
+2026/03/20 21:24:26 [notice] 31#31: exit
+2026/03/20 21:24:27 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2026/03/20 21:24:27 [notice] 1#1: worker process 29 exited with code 0
+2026/03/20 21:24:27 [notice] 1#1: worker process 31 exited with code 0
+2026/03/20 21:24:27 [notice] 1#1: signal 29 (SIGIO) received
+2026/03/20 21:24:27 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2026/03/20 21:24:27 [notice] 1#1: worker process 30 exited with code 0
+2026/03/20 21:24:27 [notice] 1#1: signal 29 (SIGIO) received
+2026/03/20 21:24:27 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2026/03/20 21:24:27 [notice] 1#1: worker process 28 exited with code 0
+2026/03/20 21:24:27 [notice] 1#1: exit
