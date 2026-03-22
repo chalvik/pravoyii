@@ -3,6 +3,7 @@
 namespace common\models;
 
 use yii\behaviors\TimestampBehavior;
+use yii\db\ActiveQuery;
 
 /**
  * This is the model class for table "translaters".
@@ -44,7 +45,7 @@ class Translater extends \yii\db\ActiveRecord
             [['city', 'deleted_at'], 'default', 'value' => null],
             [['time_zone'], 'default', 'value' => 3],
             [['status'], 'default', 'value' => 0],
-            [['fio', 'phone', 'created_at', 'updated_at'], 'required'],
+            [['fio', 'phone'], 'required'],
             [['time_zone', 'status', 'deleted_at', 'created_at', 'updated_at'], 'integer'],
             [['fio', 'city', 'phone'], 'string', 'max' => 255],
         ];
@@ -66,6 +67,11 @@ class Translater extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
+    }
+
+    function getSchedulers(): ActiveQuery
+    {
+        return $this->hasMany(TranslaterShedulers::class, ['translater_id' => 'id']);
     }
 
 }

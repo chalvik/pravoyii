@@ -10,7 +10,7 @@ class Module extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'common\modules\translate\controllers';
+    public $controllerNamespace = 'frontend\modules\translate\controllers';
 
     /**
      * {@inheritdoc}
@@ -18,7 +18,5 @@ class Module extends \yii\base\Module
     public function init()
     {
         parent::init();
-
-        // custom initialization code goes here
     }
 }

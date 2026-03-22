@@ -2,6 +2,8 @@
 
 namespace frontend\modules\translate\controllers;
 
+use common\enums\TranslatorStatusEnum;
+use common\models\Translater;
 use yii\rest\Controller;
 
 /**
@@ -9,7 +11,6 @@ use yii\rest\Controller;
  */
 class DefaultController extends Controller
 {
-
     public function behaviors()
     {
         $behaviors = parent::behaviors();
@@ -22,22 +23,22 @@ class DefaultController extends Controller
                 'application/json' => \yii\web\Response::FORMAT_JSON,
             ],
         ];
-        $behaviors['access'] = [
-            'class' => \yii\filters\AccessControl::className(),
-            'only' => ['index'],
-            'rules' => [
-                [
-                    'actions' => ['index'],
-                    'allow' => true,
-                    'roles' => ['*'],
-                ],
-            ],
-        ];
         return $behaviors;
     }
 
     public function actionIndex()
     {
-        return 'Test';
+        $w = date('w');
+
+        $count = Translater::find()
+            ->select(['translaters.id', 's.weekday'])
+            ->leftJoin('translater_shedulers as s', 's.translater_id = translaters.id')
+            ->where(['s.weekday' => $w])
+            ->groupBy('id')
+            ->count();
+
+            $message=  ($count > 0) ?'«Список переводчиков готов»':'«Нет свободных переводчиков»';
+
+        return ['message' => $message];
     }
 }
