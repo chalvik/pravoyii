@@ -46,5 +46,10 @@ return [
         ],
 
     ],
+    'modules' => [
+        'schedule' => [
+            'class' => 'frontend\modules\translate\Module',
+        ],
+    ],
     'params' => $params,
 ];

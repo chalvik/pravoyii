@@ -28,19 +28,19 @@ services:
 #      - "host.docker.internal:host-gateway"
 
   mysql:
-    image: mysql:latest
+    image: mysql:9.0.0
     restart: "no"
     ports:
       - "${MYSQL_PORT}:3306"
     volumes:
-      - mysql:/var/lib/mysql
+      - mysql_data:/var/lib/mysql
     security_opt:
       - seccomp:unconfined
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: local
       MYSQL_DATABASE: ${DB_DATABASE}
       MYSQL_USER: ${DB_USER}
       MYSQL_PASSWORD: ${DB_USER_PASSWORD}
 
 volumes:
-  mysql:
+  mysql_data:

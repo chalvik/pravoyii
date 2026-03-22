@@ -32,7 +32,7 @@ docker exec -it pravo-php  composer install
   - Production
 - подтвердить выбор еаписав - yes
 ```shell
-docker exec -it pravo-php init
+docker exec -it pravo-php php init
 ```
 
 Миграции:

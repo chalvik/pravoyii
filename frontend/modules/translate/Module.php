@@ -1,6 +1,6 @@
 <?php
 
-namespace common\modules\translate;
+namespace frontend\modules\translate;
 
 /**
  * translate module definition class

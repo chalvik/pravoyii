@@ -1,6 +1,6 @@
 <?php
 
-namespace common\modules\translate\controllers;
+namespace frontend\modules\translate\controllers;
 
 use yii\rest\Controller;
 
