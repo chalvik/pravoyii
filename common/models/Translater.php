@@ -20,8 +20,6 @@ use yii\db\ActiveQuery;
  */
 class Translater extends \yii\db\ActiveRecord
 {
-
-
     /**
      * {@inheritdoc}
      */
@@ -69,7 +67,7 @@ class Translater extends \yii\db\ActiveRecord
         ];
     }
 
-    function getSchedulers(): ActiveQuery
+    public function getSchedulers(): ActiveQuery
     {
         return $this->hasMany(TranslaterShedulers::class, ['translater_id' => 'id']);
     }

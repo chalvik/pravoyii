@@ -4,6 +4,7 @@ namespace common\models;
 
 use yii\db\ActiveQuery;
 use common\models\Translater;
+
 /**
  * This is the model class for table "translater_shedulers".
  *
@@ -17,7 +18,6 @@ use common\models\Translater;
  */
 class TranslaterShedulers extends \yii\db\ActiveRecord
 {
-
     /**
      * {@inheritdoc}
      */
@@ -57,7 +57,7 @@ class TranslaterShedulers extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getTranslater():ActiveQuery
+    public function getTranslater(): ActiveQuery
     {
         return $this->hasOne(Translater::class, ['id' => 'translater_id']);
     }

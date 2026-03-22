@@ -37,7 +37,7 @@ class DefaultController extends Controller
             ->groupBy('id')
             ->count();
 
-            $message=  ($count > 0) ?'«Список переводчиков готов»':'«Нет свободных переводчиков»';
+        $message =  ($count > 0) ? '«Список переводчиков готов»' : '«Нет свободных переводчиков»';
 
         return ['message' => $message];
     }

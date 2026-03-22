@@ -2,6 +2,7 @@
 
 use yii\db\Migration;
 use common\enums\TranslatorStatusEnum;
+
 /**
  * Handles the creation of table `{{%translaters}}`.
  */
