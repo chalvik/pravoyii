@@ -27,21 +27,20 @@ services:
 #    extra_hosts:
 #      - "host.docker.internal:host-gateway"
 
-#  mysql:
-#    image: mysql:latest
-#    restart: "no"
-#    ports:
-#      - "${MYSQL_PORT}:3306"
-#    volumes:
-#      - mysql:/var/lib/mysql
-#    security_opt:
-#      - seccomp:unconfined
-#    environment:
-#      MYSQL_ROOT_PASSWORD: local
-#      MYSQL_DATABASE: ${DB_DATABASE}
-#      MYSQL_USER: ${DB_USERNAME}
-#      MYSQL_PASSWORD: ${DB_PASSWORD}
+  mysql:
+    image: mysql:latest
+    restart: "no"
+    ports:
+      - "${MYSQL_PORT}:3306"
+    volumes:
+      - mysql:/var/lib/mysql
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_USER_PASSWORD}
 
 volumes:
   mysql:
-  redis:
